@@ -1,0 +1,6 @@
+com\steel\trace\service\ReconciliationServiceTest.class
+com\steel\trace\service\TraceServiceTest.class
+com\steel\trace\service\AuthServiceTest.class
+com\steel\trace\service\CoilServiceTest.class
+com\steel\trace\service\ChainDiagnosisServiceTest.class
+com\steel\trace\service\HeatServiceTest.class

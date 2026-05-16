@@ -1,0 +1,351 @@
+/* ===== AG Grid Quartz 主题深度定制 ===== */
+
+/* ---------- 基础变量 ---------- */
+.ag-theme-quartz {
+  --ag-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+    "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --ag-font-size: 13px;
+  --ag-header-font-size: 13px;
+  --ag-header-font-weight: 600;
+
+  /* 行高 */
+  --ag-header-height: 44px;
+  --ag-row-height: 42px;
+
+  /* 颜色 */
+  --ag-background-color: #ffffff;
+  --ag-foreground-color: #1a2332;
+  --ag-data-color: #1a2332;
+  --ag-secondary-foreground-color: #5f6b7a;
+
+  /* 表头样式 - 深蓝渐变 */
+  --ag-header-background-color: #f0f4f8;
+  --ag-header-foreground-color: #1a2332;
+  --ag-header-column-separator: none;
+
+  /* 行样式 */
+  --ag-odd-row-background-color: #f8fafc;
+  --ag-row-hover-color: #e8f0fe;
+  --ag-row-border-color: #eaedf0;
+  --ag-selected-row-background-color: #e3f2fd;
+
+  /* 边框 */
+  --ag-border-color: #e2e6ea;
+  --ag-borders: solid 1px;
+  --ag-borders-row: solid 1px;
+  --ag-borders-column: none;
+  --ag-border-radius: 0px;
+  --ag-wrapper-border-radius: 8px;
+  --ag-cell-horizontal-border: none;
+
+  /* 单元格内边距 */
+  --ag-cell-horizontal-padding: 14px;
+  --ag-cell-vertical-padding: 6px;
+
+  /* 滚动条 */
+  --ag-scrollbar-size: 8px;
+  --ag-scrollbar-start-background-color: #f0f4f8;
+  --ag-scrollbar-end-background-color: #d0d7de;
+  --ag-scrollbar-border-radius: 4px;
+
+  /* 输入框（筛选） */
+  --ag-input-focus-border-color: #4a90d9;
+  --ag-input-focus-box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+  --ag-input-border-color: #d0d7de;
+
+  /* 卡片样式 */
+  --ag-card-radius: 8px;
+  --ag-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- 表头 ---------- */
+.ag-theme-quartz .ag-header {
+  border-bottom: 2px solid #2b5797;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+}
+
+.ag-theme-quartz .ag-header-cell {
+  border-right: 1px solid #e8ecf0;
+  transition: background-color 0.15s ease;
+}
+
+.ag-theme-quartz .ag-header-cell:last-child {
+  border-right: none;
+}
+
+.ag-theme-quartz .ag-header-cell:hover {
+  background: rgba(43, 87, 151, 0.06);
+}
+
+/* 表头排序/筛选图标 */
+.ag-theme-quartz .ag-header-icon {
+  color: #8896a7;
+}
+
+/* ---------- 行交互 ---------- */
+.ag-theme-quartz .ag-row {
+  border-bottom: 1px solid #f0f2f4;
+  transition: background-color 0.12s ease;
+}
+
+.ag-theme-quartz .ag-row:last-child {
+  border-bottom: none;
+}
+
+.ag-theme-quartz .ag-row-hover {
+  background: var(--ag-row-hover-color) !important;
+}
+
+.ag-theme-quartz .ag-row-selected {
+  background: var(--ag-selected-row-background-color) !important;
+  border-bottom-color: #d0ddf0;
+}
+
+/* ---------- 选中行高亮 ---------- */
+.ag-theme-quartz .ag-row-selected .ag-cell {
+  color: #0d47a1;
+  font-weight: 500;
+}
+
+/* ---------- 筛选器浮层 ---------- */
+.ag-theme-quartz .ag-filter {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e2e6ea;
+  padding: 12px;
+}
+
+.ag-theme-quartz .ag-filter .ag-input-field-input {
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  padding: 6px 10px;
+  font-size: 13px;
+  transition: border-color 0.15s ease;
+}
+
+.ag-theme-quartz .ag-filter .ag-input-field-input:focus {
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+  outline: none;
+}
+
+/* 筛选按钮 */
+.ag-theme-quartz .ag-standard-button {
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border: 1px solid #d0d7de;
+  background: #fff;
+  color: #1a2332;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ag-theme-quartz .ag-standard-button:hover {
+  background: #f0f4f8;
+  border-color: #b0b8c4;
+}
+
+.ag-theme-quartz .ag-filter-apply-panel .ag-standard-button:first-child {
+  background: #2b5797;
+  border-color: #2b5797;
+  color: #fff;
+}
+
+.ag-theme-quartz .ag-filter-apply-panel .ag-standard-button:first-child:hover {
+  background: #1e3d6b;
+  border-color: #1e3d6b;
+}
+
+/* ---------- 浮动筛选行 ---------- */
+.ag-theme-quartz .ag-floating-filter {
+  padding: 4px 8px;
+}
+
+.ag-theme-quartz .ag-floating-filter-input {
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  padding: 4px 8px;
+  font-size: 12px;
+  transition: border-color 0.15s ease;
+}
+
+.ag-theme-quartz .ag-floating-filter-input:focus {
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.12);
+  outline: none;
+}
+
+/* ---------- 分页 ---------- */
+.ag-theme-quartz .ag-paging-panel {
+  border-top: 1px solid #e2e6ea;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #5f6b7a;
+  background: #f8fafc;
+  border-radius: 0 0 8px 8px;
+}
+
+.ag-theme-quartz .ag-paging-button {
+  border-radius: 4px;
+  padding: 4px 10px;
+  border: 1px solid #d0d7de;
+  background: #fff;
+  color: #1a2332;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ag-theme-quartz .ag-paging-button:hover:not(:disabled) {
+  background: #e8f0fe;
+  border-color: #4a90d9;
+  color: #0d47a1;
+}
+
+.ag-theme-quartz .ag-paging-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- 单元格 ---------- */
+.ag-theme-quartz .ag-cell {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+/* 数值列右对齐 */
+.ag-theme-quartz .ag-cell.ag-cell-number {
+  justify-content: flex-end;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 自定义标签样式 ---------- */
+.ag-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 13px;
+  border: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.ag-tag-default { color: #fff; background: #4a90d9; }
+.ag-tag-success { color: #fff; background: #34a853; }
+.ag-tag-warning { color: #fff; background: #f9ab00; }
+.ag-tag-danger { color: #fff; background: #ea4335; }
+.ag-tag-info { color: #fff; background: #80868b; }
+
+/* ---------- 操作按钮 ---------- */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 4px;
+  background: transparent;
+  line-height: 1;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-btn {
+  color: #4a90d9;
+  background: rgba(74, 144, 217, 0.08);
+}
+.action-btn:hover {
+  background: rgba(74, 144, 217, 0.15);
+}
+
+.action-btn.primary {
+  color: #0d47a1;
+  background: rgba(13, 71, 161, 0.08);
+}
+.action-btn.primary:hover {
+  background: rgba(13, 71, 161, 0.15);
+}
+
+.action-btn.danger {
+  color: #d32f2f;
+  background: rgba(211, 47, 47, 0.08);
+}
+.action-btn.danger:hover {
+  background: rgba(211, 47, 47, 0.15);
+}
+
+.action-btn.success {
+  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.08);
+}
+.action-btn.success:hover {
+  background: rgba(46, 125, 50, 0.15);
+}
+
+.action-btn.warning {
+  color: #e65100;
+  background: rgba(230, 81, 0, 0.08);
+}
+.action-btn.warning:hover {
+  background: rgba(230, 81, 0, 0.15);
+}
+
+/* ---------- AG Grid 容器卡片 ---------- */
+.ag-theme-quartz {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 树/分组图标 ---------- */
+.ag-theme-quartz .ag-group-expanded .ag-icon-tree-open {
+  color: #4a90d9;
+}
+
+/* ---------- 空状态 ---------- */
+.ag-theme-quartz .ag-overlay-no-rows-center {
+  font-size: 14px;
+  color: #9aa0a8;
+  padding: 20px;
+}
+
+/* ---------- 列菜单按钮 ---------- */
+.ag-theme-quartz .ag-column-drop-cell {
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+/* ---------- Toast 加载动画 ---------- */
+.ag-theme-quartz.ag-loading {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+/* 行内高亮样式（异常行） */
+.row-abnormal {
+  background: #fff5f5 !important;
+}
+.row-abnormal .ag-cell {
+  color: #c62828;
+}
+.row-warning {
+  background: #fff8e1 !important;
+}
+.row-warning .ag-cell {
+  color: #e65100;
+}
